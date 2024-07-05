@@ -1,0 +1,401 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
+*{
+    padding: 0%
+    ;
+    margin: 0%;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+*::selection{
+    background-color: black;
+    color: white;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+nav{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: +1111;
+    mix-blend-mode: difference;
+}
+nav a h5{
+    color: white;
+    position: absolute;
+    letter-spacing: 1px;
+    float: left;
+    white-space: wrap;
+    top: 1rem;
+    line-height: 15px;
+    font-family: poppins;
+    width: 100px;
+    left: 1.3rem;
+    font-size: 1rem;
+}
+nav ul{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li a{
+    letter-spacing: 1px;
+    color:#ffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .7rem;
+    position: relative;
+      mix-blend-mode: darken;
+}
+nav ul li a::before{
+    content: "";
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -2px;
+    transition: .2s ease-in-out;
+}
+nav ul li a:hover::before{
+ width: 100%;
+   
+
+
+}
+
+
+.page1{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+nav a button{
+    float: right;
+    top: -25px;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;margin-right: 1.3rem;
+    width: 100px;
+   background-color: rgb(255, 255, 255);
+   border: 2px solid black;
+   mix-blend-mode: difference;
+    height: 40px;
+    font-size: .6rem;
+    font-weight: 600;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .2s ease;
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+nav a button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    font-size: .6rem;
+    box-shadow: 3px 3px 1px 1px rgb(255, 255, 255);
+
+}
+.page1-content{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 255, 0);
+   
+}
+
+h1{
+    font-size: 9rem;
+    font-weight: 600;
+line-height: 120px;
+    font-family:poppins;
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 8px 0px 1px black;
+    letter-spacing: 10px;
+    top: 18%;
+    animation: text linear forwards;
+    animation-timeline: view();
+   
+}
+
+@keyframes text {
+    0%{
+transform: translateX(171%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.page3{
+    width: 100%;
+    z-index: +1;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    animation: three linear;
+    animation-timeline: view();
+    animation-range: entry 0.1% cover 50%;
+}
+/* @keyframes three {
+    0.1%{
+        border-radius: 50%;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    85%{
+        border-radius: 0%;
+    }
+    100%{
+        border-radius: 0%;
+    }
+} */
+.first{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 24%;
+ transition: .1s;
+    left: 68%;
+    rotate: 170deg;
+}
+.first:hover{
+    rotate: 190deg;
+    width: 60px;
+}
+.fe{
+    color: rgb(0, 0, 0);
+    font-family: poppins;
+    position: absolute;
+    top: 59%;  
+    left: 40%;
+    font-size: 1.8rem;
+    animation: fe linear;
+    animation-timeline: view();
+}
+@keyframes fe {
+    0%{
+        top: 35%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+.fe::before{
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    left: 0%;
+bottom: 0%;
+top: 34px;
+transition: .4s;
+scale: 0;
+}
+.fe:hover::before{
+    scale: 1;
+}
+.summry{
+    width: 400px;
+    display: none;
+    position: relative;
+    top: 58%;
+    font-family: poppins;
+    left: 55%;
+    font-size: .8rem;
+    word-spacing: 5px;
+    color: #242424;
+    z-index: +111;
+    transition: .2s;
+   cursor: grab;
+   animation: summry linear;
+   animation-timeline: view();
+   
+}
+@keyframes summry {
+    0%{
+        transform: translateY(-30%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+    
+}
+
+.summry:hover{
+    text-decoration:2px underline;
+    
+   
+}
+
+.second{
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 63%;
+    left: 55%;
+   
+rotate: 260deg;
+animation: sec linear;
+animation-timeline: view();
+}
+@keyframes sec {
+    from{
+      
+    }
+to{
+  }
+}
+
+
+.languages{
+    position: absolute;
+    top: 60%;
+    left: 42%;
+    font-family: poppins;
+    font-size: 1.1rem;
+    animation: lang linear;
+    animation-timeline: view();
+}
+@keyframes lang {
+    from{
+        top: 55%;
+      }
+  to{
+  top: 100%;    }
+}
+.languages span::before{
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    left: 0%;
+top: 24px;
+transition: .4s;
+scale: 0;
+}
+.languages span:hover::before{
+    scale: 1;
+}
+.lim{
+    display: flex;
+    margin-top: 10px;
+}
+.lim img{
+    width: 30px;
+    transition: .1s;
+    height: 30px;
+}
+.page1 h3{
+    position: absolute;
+    top: 11%;
+    left: 15%;
+    font-size: 2.4rem; color:rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: poppins;
+    animation: hello linear forwards;
+    animation-timeline: view();
+
+}
+@keyframes hello {
+    0%{
+        transform: translateY(800%);
+
+    }
+    100%{
+        transform: translateY(-200%);
+    }
+}
+.lim .js{
+    width: 50px;
+    margin-left: -10px;
+}
+.lim img:hover{
+    scale: .8;
+}
+.third{
+    position: absolute;
+    top: 52%;
+    left:80%;
+ 
+    width: 60px;
+    height: 50px;
+    rotate: 222deg;
+    animation: third linear forwards;
+    animation-timeline: view();
+}
+@keyframes third {
+    from{
+      top: -16%;
+    }
+to{
+top: 600%;    }
+}
+
+.frameworks{
+    position: absolute;
+    top: 49%;
+    left: 53%;
+    animation: frame linear
+    ;
+    animation-timeline: view();
+
+}
+@keyframes frame {
+    from{
+        top: 47%;
+      }
+  to{
+  top: 120%;    }
+}
+.frameworks span{
+    font-size: 1rem;
+    color: black;
+    white-space: nowrap;
+    font-family: poppins;
+    position: absolute;
+}
+.frameworks span::before{
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    left: 0%;
+bottom: 0%;
+top: 20px;
+transition: .4s;
+scale: 0;
+}
+.frameworks span:hover::before{
+    scale: 1;
+}
+.fwi img{
+    width: 50px;
+    height: 50px;
+    transition: .2s ease;
+}
+.fwi{
+    display: flex;
+    margin-top: 20px;
+}
+.fwi img:hover{
+    scale: .8;
+}
